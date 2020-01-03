@@ -30,12 +30,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Seynshun
 search: true
 search_full_content: true
-search_provider: algolia
-algolia:
-  application_id: ZCS26FSSO4
-  index_name: Master
-  search_only_api_key: 5ab0d621b4c1553a0c220e786e846f16
-  powered_by: # true (default), false
   
 # Build settings
 remote_theme: "Seynshun/jekyll-theme-basically-basic"
