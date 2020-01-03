@@ -32,9 +32,9 @@ search: true
 search_full_content: true
 search_provider: algolia
 algolia:
-  application_id: QB6HVGBSBA
-  index_name: basically-basic
-  search_only_api_key: 9d5014e5bbc77372547bce778dfa5663
+  application_id: ZCS26FSSO4
+  index_name: Master
+  search_only_api_key: 5ab0d621b4c1553a0c220e786e846f16
   powered_by: # true (default), false
   
 # Build settings
