@@ -13,10 +13,22 @@ git reset --hard HEAD
 ```html
 git checkout nom-branche
 ```
-- Renommer fichier : `git mv old_filename new_filename`
+- Renommer fichier : 
+```html
+git mv old_filename new_filename
+```
 
-- Sauvegarder modifications : `git stash`
+- Sauvegarder modifications : 
+```html
+git stash
+```
 
-- Restaurer modifications : `git stash apply`
+- Restaurer modifications : 
+```html
+git stash apply
+```
 
-- Consulter la liste des stashs : `git stash list`
+- Consulter la liste des stashs : 
+```html
+git stash list
+```
