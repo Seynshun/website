@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Projets de Programmation (PdP) 2019"
+date:   2020-01-08 11:37:29 +0100
+categories: jekyll update
+---
+
+## Master 1 Info -- Second semestre
+
+Nom d'utilisateur : pdp
+Mot de passe: pdp
+
+http://dept-info.labri.fr/~narbel/PdP/
+
+
