@@ -8,8 +8,9 @@ categories: jekyll update
 ## Master 1 Info -- Second semestre
 
 Nom d'utilisateur : pdp
+
 Mot de passe: pdp
 
-http://dept-info.labri.fr/~narbel/PdP/
+[Master PdP](http://dept-info.labri.fr/~narbel/PdP/)
 
 
