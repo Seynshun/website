@@ -4,14 +4,14 @@ title: Git
 permalink: /git/
 ---
 
-Réinitialiser à l'état du dernier commit : git reset --hard HEAD
+- Réinitialiser à l'état du dernier commit : `git reset --hard HEAD`
 
-Changer de branche : git checkout nom-branche
+- Changer de branche : `git checkout nom-branche`
 
-Renommer fichier : git mv old_filename new_filename
+- Renommer fichier : `git mv old_filename new_filename`
 
-Sauvegarder modifications : git stash
+- Sauvegarder modifications : `git stash`
 
-Restaurer modifications : git stash apply
+- Restaurer modifications : `git stash apply`
 
-Consulter la liste des stashs : git stash list
+- Consulter la liste des stashs : `git stash list`
