@@ -4,7 +4,7 @@ title: Git
 permalink: /git/
 ---
 
-- Réinitialiser à l'état du dernier commit : `git reset --hard HEAD`
+- Réinitialiser à l'état du dernier commit : ```html git reset --hard HEAD ```
 
 - Changer de branche : `git checkout nom-branche`
 
