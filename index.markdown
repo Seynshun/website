@@ -1,6 +1,6 @@
 ---
 #
 layout: home
-alt_title: Cours
+alt_title: Ressources
 image: /assets/home.png
 ---
