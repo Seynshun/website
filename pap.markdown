@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Programmation des Architectures Parallèles
+title: PAP
+alt_title: Programmation des Architectures parallèles
 permalink: /pap/
 ---
 

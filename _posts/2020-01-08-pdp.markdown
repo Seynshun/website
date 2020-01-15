@@ -5,12 +5,11 @@ date:   2020-01-08 11:37:29 +0100
 categories: jekyll update
 ---
 
-## Master 1 Info -- Second semestre
+## [Site PdP](http://dept-info.labri.fr/~narbel/PdP/)
 
 Nom d'utilisateur : pdp
 
 Mot de passe: pdp
 
-[Master PdP](http://dept-info.labri.fr/~narbel/PdP/)
 
 
