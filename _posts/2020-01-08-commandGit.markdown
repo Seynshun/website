@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  Commandes Git
-date:   2020-01-14 11:37:29 +0100
+date:   2020-01-07 11:37:29 +0100
 categories: jekyll update
 ---
 
-# Quelques commandes git utiles :
+# Quelques commandes git utiles 
 
 - Réinitialiser à l'état du dernier commit : 
 ```html
