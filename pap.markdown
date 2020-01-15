@@ -8,24 +8,24 @@ permalink: /pap/
 [Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
 [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
 
- - Gdb : Options d'optimisation pour gagner du temps :
+ ### Gdb : Options d'optimisation pour gagner du temps :
 
- -O3 ~ facteur 6-7
- -O0 ~ facteur 10
+ - -O3 ~ facteur 6-7
+ - -O0 ~ facteur 10
 
- - SIMD (Single Instruction on Multiple Data) : Parallélisme avec vecteurs
+ ### SIMD (Single Instruction on Multiple Data) : Parallélisme avec vecteurs
  
  Problème : Tous les threads ne sont pas solicités de la même manière.
- Solution : 
+ #### Solution : 
  - Option "dynamic" : Utilise un "guichet" (mutex)
  - Option "static" : Zone traitée par un coeur donné prédterminée
 
-# Grain de parallélisation
+### Grain de parallélisation
 
 Découper en petite taches : beaucoup de parallélisme mais coûte cher
 Il faut trouver un équilibre sur la taille du découpage 
 
-# Parallélisme Fork-Join 
+### Parallélisme Fork-Join 
 
 ```c
 void *fun(void * id){
@@ -50,8 +50,8 @@ void main(){
     }
 }
 ```
-# Calcul en parallèle : distribution d'indices
-Fonction d'un omp parallel for (static) : 
+### Calcul en parallèle : distribution d'indices
+Fonctionnement d'un omp parallel for (static) : 
 ```c
 void * omp_fun(void * id){
     int me = * (int*) id;
@@ -68,17 +68,13 @@ void * omp_fun(void * id){
 }
 ```
 
-# Changer le comportement du programme :
+### Changer le comportement du programme :
 
 ```c
 #pragama omp paralell{
-    .
-    .
-    .
+    ...
     #pragma omp for schedule(dynamic){
-        .
-        .
-        .
+        ...
     }
 }
 ```
