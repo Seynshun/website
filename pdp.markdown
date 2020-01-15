@@ -10,3 +10,7 @@ permalink: /pdp/
 [Processus de d´eveloppement de programmes](http://dept-info.labri.fr/~narbel/PdP/Doc/2cours_GL_PdP.pdf)
 
 [Analyse des besoins](http://dept-info.labri.fr/~narbel/PdP/Doc/3cours_Besoins1_PdP.pdf)
+
+[Documentation et bibliographie](http://dept-info.labri.fr/~narbel/PdP/Doc/Acours_Biblio_PdP.pdf)
+
+[Règles d'utilisation de git pour un projet PdP](http://dept-info.labri.fr/~narbel/PdP/Doc/git_use_constraints.html)
