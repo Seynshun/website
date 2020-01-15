@@ -5,8 +5,10 @@ alt_title: Programmation des Architectures parallèles
 permalink: /pap/
 ---
 
-[Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
-[OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
+### Liens : 
+
+- [Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
+- [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
 
  ### Gdb : Options d'optimisation pour gagner du temps :
 
@@ -22,8 +24,7 @@ permalink: /pap/
 
 ### Grain de parallélisation
 
-Découper en petite taches : beaucoup de parallélisme mais coûte cher
-Il faut trouver un équilibre sur la taille du découpage 
+Découper en petite taches = beaucoup de parallélisme mais coûte cher. Il faut trouver un équilibre sur la taille du découpage 
 
 ### Parallélisme Fork-Join 
 
