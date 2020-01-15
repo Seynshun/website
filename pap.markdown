@@ -9,17 +9,17 @@ permalink: /pap/
 - [Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
 - [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
 
- ### Gdb  
- Options d'optimisation pour gagner du temps :
- - -O3 ~ facteur 6-7
- - -O0 ~ facteur 10
+### Gdb 
+Options d'optimisation pour gagner du temps :
+- -O3 ~ facteur 6-7
+- -O0 ~ facteur 10
 
- ### SIMD (Single Instruction on Multiple Data) : Parallélisme avec vecteurs
+### SIMD (Single Instruction on Multiple Data) : Parallélisme avec vecteurs
  
- Problème : Tous les threads ne sont pas solicités de la même manière.
- #### Solution : 
- - Option "dynamic" : Utilise un "guichet" (mutex)
- - Option "static" : Zone traitée par un coeur donné prédterminée
+Problème : Tous les threads ne sont pas solicités de la même manière.
+#### Solution : 
+- Option "dynamic" : Utilise un "guichet" (mutex)
+- Option "static" : Zone traitée par un coeur donné prédterminée
 
 ### Grain de parallélisation
 
