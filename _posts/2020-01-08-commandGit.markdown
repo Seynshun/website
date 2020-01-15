@@ -1,8 +1,10 @@
+layout: post
+title:  Commandes Git
+date:   2020-01-14 11:37:29 +0100
+categories: jekyll update
 ---
-layout: page
-title: Git
-permalink: /git/
----
+
+# Quelques commandes git utiles :
 
 - Réinitialiser à l'état du dernier commit : 
 ```html

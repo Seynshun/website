@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Projet de programmation
+title: PdP
+alt_title: Projet de programmation
 permalink: /pdp/
 ---
 
