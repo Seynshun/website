@@ -5,13 +5,12 @@ alt_title: Programmation des Architectures parallèles
 permalink: /pap/
 ---
 
-### Liens : 
-
+### Liens 
 - [Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
 - [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
 
- ### Gdb : Options d'optimisation pour gagner du temps :
-
+ ### Gdb  
+ Options d'optimisation pour gagner du temps :
  - -O3 ~ facteur 6-7
  - -O0 ~ facteur 10
 
