@@ -11,7 +11,10 @@ categories: jekyll update
 ```html
 git reset --hard HEAD 
 ```
-
+- Créer une branche :
+```html
+git branch nom-branche
+```
 - Changer de branche : 
 ```html
 git checkout nom-branche
@@ -35,3 +38,5 @@ git stash apply
 ```html
 git stash list
 ```
+
+- Fusionner des dépôts en gardant l'historique : [Lien](https://www.alexkras.com/git-merg-two-or-more-repositories-and-keeping-history/)

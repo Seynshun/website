@@ -6,7 +6,7 @@ permalink: /pap/
 ---
 
 ### Liens 
-- [Introduction](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/introduction.pdf)
+- [Introduction](https://gforgeron.gitlab.io/pap/cours/introduction.pdf)
 - [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
 
 ### Gdb 
