@@ -71,10 +71,97 @@ void * omp_fun(void * id){
 ### Changer le comportement du programme :
 
 ```c
-#pragama omp paralell{
+#pragama omp paralell{ //pthread_create
     ...
     #pragma omp for schedule(dynamic){
         ...
     }
+} //pthread_join(barrier)
+```
+
+Pour paralléliser un code, les itérations doivent être indépendantes les unes des autres. Ce n'est pas le cas de t[i] = t[i] + t[i-1]
+
+### Comment paralléliser ce code ?
+```c
+for (etape = 0; etape < k; etape++){
+    for(int i = 0; i<10; i++){
+        out[i] = f(input,i);
+    }
+    memcpy(input,out,...);
 }
 ```
+
+#### Parallélisation :
+
+```c
+#pragma omp parallel // Ici car si on le place dans une boucle, on créerait des threads à chaque itérations
+for (etape = 0; etape < k; etape++){
+    #pragma omp parallel for
+    for(int i = 0; i<10; i++){
+        out[i] = f(input,i);
+    } // Barrière implicite
+    #pragma omp master // ou if (omp_get_thread_num() == 0)
+    memcpy(input,out,...); // 1 seul thread fait memcpy
+    #pragma omp barrier // on attend tous les threads
+}
+```
+
+#pragma omp single fait comme #pragma omp master mais avec une barrière implicite.
+```c
+#pragma omp single
+memcpy(input,out,...);
+```
+
+##### Pour enlever le memcpy :
+
+```c
+int * entree = input;
+int * sortie = out;
+#pragma omp parallel 
+for (etape = 0; etape < k; etape++){
+    #pragma omp parallel for
+    for(int i = 0; i<10; i++){
+        sortie[i] = f(entree,i);
+    } // Barrière implicite
+    #pragma omp master 
+    swap(entree,sortie); 
+    #pragma omp barrier 
+}
+```
+
+##### Pour encore améliorer le code :
+
+```c
+int * entree = input;
+int * sortie = out;
+#pragma omp parallel firstprivate(entree,sortie) // Chaque thread à sa propre instance de variable et est initialisée avec la valeur de la variable
+for (etape = 0; etape < k; etape++){
+    #pragma omp parallel for // ou "pragma omp parallel for nowait" pour faire sauter la barrière implice plutôt que la dernière barrière 
+    for(int i = 0; i<10; i++){
+        sortie[i] = f(entree,i);
+    } // Barrière implicite
+    swap(entree,sortie); 
+}
+```
+
+### Comment paralléliser ce code ?
+
+```c
+for (int i =0; i<N; i++)
+    s += f(i);
+```
+
+#### Parallélisation :
+
+```c
+#pragma omp parallel for reduction (+:s)
+for (int i =0; i<N; i++)
+    s += f(i);
+```
+
+### Différents cas de compléxités :
+
+- constant -> static
+- linéaire -> static,1
+- exponentielle -> dynamic
+- aléatoire -> static,1 (sauf si périodique) ou dynamic si les variations sont grandes
