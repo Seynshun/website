@@ -249,5 +249,12 @@ for(int s = 0; s < N ; s++){
     moyennes[s]= moyennes[s]/seq[s].fin - seq[s].debut
 }
 ```
+ #### Question 3
+
+|       | 10^7 seq 4 | 4 seq de 10^7 | melange |
+|       |:--------|:-------:|--------:|
+|externe| cell1   | cell2   | cell3   |
+|interne| cell4   | cell5   | cell6   |
+|       |=============================|
 
 
