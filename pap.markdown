@@ -222,4 +222,32 @@ x = f()
 y = g(x)
 ```
 
+### Correction DS 2016
+
+#### Question 1
+
+##### Version sequentielle 
+
+```c
+for(int s = 0; s < N ; s++){
+    for(int i = seq[s].debut; i<seq[s].fin; i++){
+        moyennes[s]+= elements[i];
+        }
+    moyennes[s]= moyennes[s]/seq[s].fin - seq[s].debut
+}
+```
+
+##### Version parallèle
+
+```c
+#pragma omp parallel for
+for(int s = 0; s < N ; s++){
+    #pragma omp parallel for reduction (+:moyennes[s])
+    for(int i = seq[s].debut; i<seq[s].fin; i++){
+        moyennes[s]+= elements[i];
+        }
+    moyennes[s]= moyennes[s]/seq[s].fin - seq[s].debut
+}
+```
+
 
