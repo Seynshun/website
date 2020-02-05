@@ -249,7 +249,7 @@ for(int s = 0; s < N ; s++){
     moyennes[s]= moyennes[s]/seq[s].fin - seq[s].debut
 }
 ```
- #### Question 3
+#### Question 3
 
 |       | 10^7 seq 4 | 4 seq de 10^7 | melange |
 |       |:--------|:-------:|--------:|
@@ -257,4 +257,19 @@ for(int s = 0; s < N ; s++){
 |interne| cell4   | cell5   | cell6   |
 |       |=============================|
 
+#### Question 4 
 
+```c
+#pragma omp parallel for
+for(int s = 0; s < N ; s++){
+    if(seq[i].fin - seq[i].debut > SEUIL){
+        #pragma omp critical
+        gros_cas[SIZE] = s;
+    else{
+        for(int i = seq[s].debut; i<seq[s].fin; i++){
+            moyennes[s]+= elements[i];
+            }
+        moyennes[s]= moyennes[s]/seq[s].fin - seq[s].debut
+    }
+}
+```
