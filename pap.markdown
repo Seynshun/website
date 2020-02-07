@@ -7,7 +7,8 @@ permalink: /pap/
 
 ### Liens 
 - [Introduction](https://gforgeron.gitlab.io/pap/cours/introduction.pdf)
-- [OpenMP](http://dept-info.labri.fr/ENSEIGNEMENT/pmc/transparents/openmp.pdf)
+- [Premiers pas en OpenMP](https://gforgeron.gitlab.io/pap/cours/omp-parallel-for.pdf)
+- [Les tâches en OpenMP](https://gforgeron.gitlab.io/pap/cours/taches.pdf)
 
 ### Gdb 
 Options d'optimisation pour gagner du temps :
@@ -252,10 +253,10 @@ for(int s = 0; s < N ; s++){
 #### Question 3
 
 |       | 10^7 seq 4 | 4 seq de 10^7 | melange |
-|       |:--------|:-------:|--------:|
-|externe| cell1   | cell2   | cell3   |
-|interne| cell4   | cell5   | cell6   |
-|       |=============================|
+|       |:--------   |:-------------:|--------:|
+|externe| 100%       | 4%            | ~50%    |
+|interne| 10^-4%   | 100%            | 10^-4%  |
+|       |======================================|
 
 #### Question 4 
 
