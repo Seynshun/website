@@ -274,3 +274,19 @@ for(int s = 0; s < N ; s++){
     }
 }
 ```
+### Omp flush :
+
+Barrière mémoire = vider le pipeline -> omp flush
+
+### Un peu d'histoire :
+
+- Intel (1997) : Pentium MMX -> permet le calcul vectoriel, registre Float : 64 bits -> 4 *16
+- 1999 : SSE : vecteurs de 128 bits = 4 floats + 2 doubles
+- AVX, AVX2 : vecteurs de 256 bits -> 8 floats -> 4 doubles
+- AVX512 -> 512 bits -> 16 floats -> 4 doubles
+
+### Multithreading :
+
+- MT Coarse Grained : le processeur peut changer de threads en peu de cycle
+- Fine Grained MT : 1 thread prend 1 emplacement sur X (Round-Robin)
+- Silmutaneous MT : threads qui se mélangent
